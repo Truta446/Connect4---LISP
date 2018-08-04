@@ -1,0 +1,114 @@
+(|SYSTEM|::|VERSION| '(20080430.))
+#0Y_ #0Y |CHARSET|::|UTF-8|
+#Y(#:|1 11 (DEFUN ADD-TO-MOVES-LIST (MOVE) ...)-1|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|ADD-TO-MOVES-LIST| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|ADD-TO-MOVES-LIST|
+       #22Y(00 00 00 00 01 00 00 00 26 02 6B 00 AE 7B 01 33 02 23 0F 00 19 02)
+       (|COMMON-LISP-USER|::|GAME|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP-USER|::|MOVE|)
+       "Simple helper function that adds a move to the end of the game local variable."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|12 54 (DEFUN CHECK-MOVES NIL ...)-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|CHECK-MOVES| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|CHECK-MOVES|
+       #294Y(00 00 00 00 00 00 00 00 26 01 DA DB DC 6B 03 72 62 1B 80 93 AD 24
+             02 2F AD 6B 03 31 A1 5C 5C 78 97 02 6B 03 31 A1 5C 5C 78 8F 14 1B
+             DE B0 DF 96 04 38 10 71 91 E0 B2 6B 03 31 A1 5C 5C 78 38 10 71 91
+             E1 82 06 26 03 AD 6B 03 72 62 1B 80 4E DE B0 E7 B1 38 10 71 91 D3
+             1B 80 AA DE B0 EA B1 38 10 71 91 D6 1B 80 9E AF AE 8E 14 2F AF 6B
+             03 31 A1 78 AE 6B 03 31 A1 78 8F 14 20 AD 6B 03 31 A1 5C 78 B0 6B
+             03 31 A1 5C 78 91 01 33 0E DE B2 E2 96 04 38 10 71 91 E3 82 04 26
+             05 85 01 AD AD 91 01 32 44 16 02 85 01 AD AD 91 01 32 FF 66 16 02
+             6B 03 72 62 E4 91 01 34 07 DE AE E5 82 02 26 01 6B 03 63 AD 8C 9F
+             80 4C 87 01 00 78 E6 90 01 32 FF 7D 94 00 DB 90 01 31 FF 75 9D 5C
+             78 E9 90 01 32 FF 78 9D 5C 78 DB 90 01 31 FF 6F 9D 5C 5C 78 EC 90
+             01 32 07 9D 5C 5C 78 8F AE 0E DE B0 ED B1 38 10 71 91 D9 14 82 04
+             26 03 85 02 83 01 1B FF B2 02 19 03 16 02 AD EF 8E 14 76 64 AE 30
+             16 1F 03 00 19 03 19 03)
+       ("~%" 1. 0. |COMMON-LISP-USER|::|GAME| |COMMON-LISP|::|STRING| "Move #"
+        " is invalid. Player " " has made 2 simultaneous moves.~%" "Move #"
+        " has an invalid row value (It's row value is less than or equal to a row value in the same column that came before it.).~%"
+        42.
+        "The number of total moves == 42. On an 7x6 board any more than this would be illegal. The game should be over by now.~%"
+        7. "Move #" " contained a column with a value > 7.~%" 6. "Move #"
+        " contained a row with a value > 6.~%" 2. "Move #"
+        " has an invalid player assinged to its move.~%" "~%"
+        |COMMON-LISP|::|FORMAT|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "Checks the validity of *every* move in the game global variable at each call.\n
+  1. Checks that moves alternate (player, AI, player, AI) or (AI, player, AI, player).\n
+  2. Checks that every column is <= 7 and row move <= 6.\n
+  3. Checks that each row move is greater than the last move made in the corresponding column.\n
+  4. Checks that each move has a valid player assignment (0 for AI, 1 for player).\n
+  5. Checks that the total number of moves is <= the maximum possible number of moves (64 on an 7x6 gameboard)."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|55 63 (DEFUN PRINT-GAME NIL ...)-3|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|PRINT-GAME| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|PRINT-GAME|
+       #38Y(00 00 00 00 00 00 00 00 26 01 DA 6B 01 63 1B 0F 87 01 00 85 02 DC
+            6B 03 B0 AF 33 03 15 83 01 AD 8D 9F 6D 00 19 04)
+       (0. |COMMON-LISP-USER|::|GAME|
+        #Y(|COMMON-LISP-USER|::|PRINT-GAME-1|
+           #48Y(00 00 00 00 03 00 00 00 21 19 DA B1 38 02 31 95 B0 01 06 B6 2D
+                08 01 DC B1 38 02 31 95 B0 2F 03 10 04 B1 B4 31 8D 11 B0 2F 05
+                B0 31 97 9E 19 05)
+           ("Move " |SYSTEM|::|DO-FORMAT-DECIMAL| "# "
+            |SYSTEM|::|STREAM-START-S-EXPRESSION|
+            |COMMON-LISP|::|*PRINT-RIGHT-MARGIN*|
+            |SYSTEM|::|STREAM-END-S-EXPRESSION|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        |COMMON-LISP|::|*STANDARD-OUTPUT*|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "Prints each game move." 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|64 75 (DEFUN PICK-RANDOM-FROM-LIST (X) ...)-4|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|PICK-RANDOM-FROM-LIST|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|PICK-RANDOM-FROM-LIST|
+       #40Y(00 00 00 00 01 00 00 00 26 02 93 01 04 14 8E 1D 07 DA 38 01 31 8E
+            19 02 AD 72 62 72 B1 72 B2 38 01 72 F7 AE 31 A1 19 02)
+       ("Please pass this fuction a list!")
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP-USER|::|X|) "@return a random item from the given list x."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|76 90 (DEFUN AVAILABLE-MOVE (DESIRED-MOVE) ...)-5|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|AVAILABLE-MOVE| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|AVAILABLE-MOVE|
+       #48Y(00 00 00 00 01 00 00 00 26 02 94 01 9F 5C 78 6B 00 63 1B 13 00 19
+            06 87 01 00 AF 9E 5B 23 06 AE 9E 5C 5B 22 6F 83 01 AD 8D 9F 6C 16
+            04 02 19 02)
+       (|COMMON-LISP-USER|::|GAME|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP-USER|::|DESIRED-MOVE|)
+       "Check the game variable to see if a move is available.\n
+   desired-move must at least be a list in the form (col row)...\n
+   however, (col row player) [an element from the game var] is\n
+   acceptable as well."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|91 123 (DEFUN SIMULATE-MOVES NIL ...)-6|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|SIMULATE-MOVES| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|SIMULATE-MOVES|
+       #147Y(00 00 00 00 00 00 00 00 26 01 2E 00 DB 1B 80 76 DD 38 01 72 F7 72
+             B1 DB DE 64 DE 6B 05 72 62 72 B2 1B 16 16 05 1B 80 67 C9 F9 1B 24
+             B1 AE 6B 05 31 A1 5B 23 02 85 04 85 01 AD AD 91 01 32 6D 16 02 AE
+             E0 90 01 32 5C B0 E1 72 D2 24 04 5A C6 F9 6B 05 63 1B 15 7D 02 1B
+             0F 87 01 00 78 A3 23 06 9D 5C 78 A2 22 6F 7E 02 83 01 AD 8D 9F 6B
+             16 02 AC 02 23 0E 6B 05 B0 B0 B0 7B 03 7B 01 33 02 23 0F 05 16 04
+             85 00 AC DC 91 01 32 FF 83 16 01 2E 08 19 01)
+       (|COMMON-LISP-USER|::|AI-RESET| 1. 35. 7. 0. |COMMON-LISP-USER|::|GAME|
+        6. 2. |COMMON-LISP-USER|::|DISPLAY|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "A function that simulates moves by adding them to the game list for debugging only!"
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))

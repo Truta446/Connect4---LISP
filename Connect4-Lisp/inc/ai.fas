@@ -1,0 +1,268 @@
+(|SYSTEM|::|VERSION| '(20080430.))
+#0Y_ #0Y |CHARSET|::|UTF-8|
+#Y(#:|1 39 (IF (NOT #) (DEFVAR MOVE-POSITIONS 'NIL))-1|
+   #32Y(00 00 00 00 00 00 00 00 20 01 DA 31 57 59 1F 0E DB 31 62 DA 8C 57 04 DA
+        63 31 5A C5 19 01 19 01)
+   (|COMMON-LISP-USER|::|MOVE-POSITIONS|
+    (|COMMON-LISP|::|SPECIAL| |COMMON-LISP-USER|::|MOVE-POSITIONS|))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|41 42 (LOOP FOR I ...)-2|
+   #32Y(00 00 00 00 00 00 00 00 20 01 DA 1B 0A DC 6B 03 33 02 23 0F 03 85 00 AC
+        DB 91 01 32 70 00 19 02)
+   (0. 41. (-1.) |COMMON-LISP-USER|::|MOVE-POSITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|44 47 (DEFVAR NUM-CALCS 0)-3|
+   #24Y(00 00 00 00 00 00 00 00 20 01 DA 31 62 DB 8C 57 04 DB DC 31 5A C6 19
+        01)
+   ((|COMMON-LISP|::|SPECIAL| |COMMON-LISP-USER|::|NUM-CALCS|)
+    |COMMON-LISP-USER|::|NUM-CALCS| 0.)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|50 91 (DEFUN AI NIL ...)-4|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|AI| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|AI|
+       #91Y(00 00 00 00 00 00 00 00 26 01 DA 8C 57 0B DB 31 62 DA 8C 57 04 DA
+            63 31 5A DC 8C 57 0B DD 31 62 DC 8C 57 04 DC DE 31 5A DF 8C 57 0B
+            E0 31 62 DF 8C 57 04 DF DE 31 5A 6B 02 24 04 0F 6B 02 24 08 0E 6B
+            02 24 0A 0D 6B 02 24 0C 0C 2E 07 19 01 2E 09 19 01 2E 0B 19 01 2E
+            0D 19 01)
+       (|COMMON-LISP-USER|::|GAME|
+        (|COMMON-LISP|::|SPECIAL| |COMMON-LISP-USER|::|GAME|)
+        |COMMON-LISP-USER|::|DIFFICULTY|
+        (|COMMON-LISP|::|SPECIAL| |COMMON-LISP-USER|::|DIFFICULTY|) 0.
+        |COMMON-LISP-USER|::|AI-LAST-MOVE|
+        (|COMMON-LISP|::|SPECIAL| |COMMON-LISP-USER|::|AI-LAST-MOVE|)
+        |COMMON-LISP-USER|::|AI-MOVE-EASY| 1.
+        |COMMON-LISP-USER|::|AI-MOVE-INTM| 2.
+        |COMMON-LISP-USER|::|AI-MOVE-HARD| 3.
+        |COMMON-LISP-USER|::|AI-MOVE-INSANE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "Function that determines the function to handle the AI board move based on the difficulty option the user has chosen.\n\n
+  @global game - A list of the currently made moves and will be used to append player, as well as AI moves. Also determines\n
+  the AI move to be made. Ex: ((1 1 0) (1 2 1) (2 1 0) (2 2 1)). The first variable in the sub-list is the column of that move,\n
+  the second is the row, and the third represents the player.\n\n
+  Ex: game(move-1(column, row, player)) is a game move, where player == 0 for AI, or 1 for player, 1 <= row <= 6, 1 <= col <= 7).\n\n
+  @global difficulty - The gameplay difficulty:\n
+  0 = Easy\n
+  1 = intermediate\n
+  2 = Hard\n
+  3 = Insane"
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|91 122 (DEFUN AI-MOVE-EASY (&OPTIONAL COL-LIST) ...)-5|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|AI-MOVE-EASY| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|AI-MOVE-EASY|
+       #105Y(00 00 00 00 00 00 01 00 26 07 3D 01 AD 72 62 25 00 02 C6 F9 AD 6F
+             02 DD DA 6B 04 63 1B 2A C8 FA B0 B3 38 07 72 69 28 62 1B 1C 87 01
+             00 78 B1 8F 14 08 9D 5C 78 DF 90 01 34 64 94 00 B1 8F 14 06 9D 5C
+             78 81 B1 03 83 01 AD 8D 9F 5E 16 02 AC C5 5A 1F 14 AE AE DA 7B 03
+             2F 06 0F 07 1F 09 AE AE DA 7B 03 2F 08 19 05 19 05)
+       (0. (1. 2. 3. 4. 5. 6. 7.) |COMMON-LISP-USER|::|PICK-RANDOM-FROM-LIST|
+        1. |COMMON-LISP-USER|::|GAME| 6.
+        |COMMON-LISP-USER|::|CONVERT-MOVE-TO-NUM|
+        |COMMON-LISP-USER|::|AI-LAST-MOVE|
+        |COMMON-LISP-USER|::|ADD-TO-MOVES-LIST|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|&OPTIONAL| |COMMON-LISP-USER|::|COL-LIST|)
+       "Function that determines an 'easy' AI move.\n\n
+  Selects a legal move at random and adds a move to the global variable 'game'\n\n
+  @param col      - A random int between 1 and 7, picks the column.\n
+  @param row      - An int that represents the row for the move (incremented by the sum of pieces in each column).\n
+  @param player   - Always 0 here, as AI Player == 0.\n
+  @param flag     - Don't add the element to the list if it's invalid! (fixes recursion problem).\n
+  @param col-list - A list of the available columns with valid moves. Helps prevent stack overflow for random variable."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|122 206 (DEFUN AI-MOVE-INTM NIL ...)-6|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|AI-MOVE-INTM| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|AI-MOVE-INTM|
+       #385Y(00 00 00 00 00 00 00 00 26 01 2E 00 01 02 6B 01 72 62 24 02 81 65
+             DC 6B 04 72 62 72 B2 1B 81 47 DC 1B 81 34 E0 AD B0 73 03 37 6F 08
+             02 23 80 4A B0 CB 1B 3A AD 2F 0B F8 1F 81 44 14 6F 0C 2F 0D 1F 81
+             3C 9D 0F 0E 19 03 AE AD 73 02 37 6B 04 71 A1 25 02 26 AC 24 05 22
+             E0 AF AE 73 03 37 6B 04 71 A1 25 07 15 AE DF 90 01 32 FF B8 B0 CB
+             14 AE B1 73 03 37 7B 01 82 02 23 04 AE AD 73 02 37 6B 04 71 A1 25
+             02 34 AC E0 90 01 31 2E AE AD 73 02 37 72 B2 6B 04 71 A1 25 07 20
+             AE DF 91 01 32 0C AC AF 73 02 37 72 B2 6F 08 02 23 0E B0 AD B0 73
+             02 37 72 B2 7B 01 82 02 23 04 AE AD 73 02 37 6B 04 71 A1 25 02 1A
+             E3 AF AE 73 03 37 6B 04 71 A1 25 07 0D B0 E3 B0 AF 73 03 37 7B 01
+             82 02 23 04 AC 24 05 37 AE DF 91 01 32 31 AE AD 73 02 37 6B 04 71
+             A1 25 02 25 E4 AF AE 73 03 37 6B 04 71 A1 25 07 18 E4 AF AE 73 03
+             37 6F 08 02 23 0D B0 E4 B0 AF 73 03 37 7B 01 82 02 23 04 AC 24 02
+             37 AE DF 91 01 32 31 AE AD 73 02 37 6B 04 71 A1 25 02 25 DF AF AE
+             73 03 37 6B 04 71 A1 25 07 18 DF AF AE 73 03 37 6F 08 02 23 0D B0
+             DF B0 AF 73 03 37 7B 01 82 02 23 04 85 00 AC DF 91 01 32 FE E9 16
+             01 E3 AE 82 02 37 01 AD AD 91 01 32 FE B2 16 02 AD 8F 1D 07 AD 72
+             62 8E AD FE B9 2E 03 19 03 19 03)
+       (|COMMON-LISP-USER|::|SET-MOVE-POSITIONS| |COMMON-LISP-USER|::|GAME| 0.
+        |COMMON-LISP-USER|::|AI-MOVE-EASY| |COMMON-LISP-USER|::|MOVE-POSITIONS|
+        6. 1. -1. |COMMON-LISP-USER|::|CHECK-BELOW| 7. 8.
+        |COMMON-LISP-USER|::|PICK-CLOSEST-TO-LAST|
+        |COMMON-LISP-USER|::|CONVERT-NUM-TO-MOVE|
+        |COMMON-LISP-USER|::|ADD-TO-MOVES-LIST|
+        |COMMON-LISP-USER|::|AI-LAST-MOVE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "Function that determines an 'intermediate' AI move.\n\n
+  Selects a legal move at random and adds a move to the global variable 'game',\n
+  attempts to get 4 in a row as quickly as possible.\n\n
+  @param concurrent-moves - A list of 2 or moves in a row made by the AI player..."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|206 306 (DEFUN AI-MOVE-HARD NIL ...)-7|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|AI-MOVE-HARD| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|AI-MOVE-HARD|
+       #587Y(00 00 00 00 00 00 00 00 26 01 6B 00 72 62 24 01 0E 2E 03 63 DB DB
+             6B 04 72 62 72 B2 1B 81 E1 2E 02 19 01 C6 FA 14 1B 10 AE AD 73 02
+             37 6B 04 71 A1 25 06 02 85 03 85 00 AC DF 91 01 32 6A 16 01 AE E1
+             91 01 34 0C AF E1 AF 73 02 37 7B 01 82 02 23 03 C6 FA E0 1B 10 AE
+             AD 73 02 37 6B 04 71 A1 25 06 02 85 03 85 00 AC E1 91 01 32 6A 16
+             01 AE E1 91 01 34 10 AF AE 73 01 37 E2 B0 73 02 37 7B 02 82 02 23
+             03 C6 FA DF 1B 10 AE AD 73 02 37 6B 04 71 A1 25 06 02 85 03 85 00
+             AC E2 91 01 32 6A 16 01 AE E1 91 01 34 0E AF 96 02 E3 B0 73 02 37
+             7B 02 82 02 23 03 C6 FA E1 1B 10 AE AD 73 02 37 6B 04 71 A1 25 06
+             02 85 03 85 00 AC E3 91 01 32 6A 16 01 AE E1 91 01 34 11 AF DF AF
+             73 02 37 E4 B0 73 02 37 7B 02 82 02 23 03 C6 FA E2 1B 10 AE AD 73
+             02 37 6B 04 71 A1 25 06 02 85 03 85 00 AC E4 91 01 32 6A 16 01 AE
+             E1 91 01 34 0C AF E1 AF 73 02 37 7B 01 82 02 23 03 DB 1B 3F AE AD
+             73 02 37 6B 04 71 A1 25 06 31 E5 AF AE 73 03 37 6B 04 71 A1 25 06
+             24 E6 AF AE 73 03 37 6B 04 71 A1 25 06 17 AE AD 73 02 37 E7 91 01
+             31 0D B0 E8 B0 AF 73 03 37 7B 01 82 02 23 04 85 00 AC E4 91 01 32
+             FF BA 16 01 DB 1B 3F AE AD 73 02 37 6B 04 71 A1 25 06 31 E9 AF AE
+             73 03 37 6B 04 71 A1 25 06 24 EA AF AE 73 03 37 6B 04 71 A1 25 06
+             17 AE AD 73 02 37 EB 91 01 31 0D B0 EC B0 AF 73 03 37 7B 01 82 02
+             23 04 85 00 AC E4 91 01 32 FF BA 16 01 DB 1B 3F AE AD 73 02 37 6B
+             04 71 A1 25 06 31 E4 AF AE 73 03 37 6B 04 71 A1 25 06 24 ED AF AE
+             73 03 37 6B 04 71 A1 25 06 17 AE AD 73 02 37 E8 91 01 32 0D B0 EE
+             B0 AF 73 03 37 7B 01 82 02 23 04 85 00 AC E4 91 01 32 FF BA 16 01
+             E5 AE 82 02 37 01 AD AD 91 01 32 FE 1C 16 02 AD 63 1B 27 2E 19 19
+             03 87 01 00 14 6F 15 88 16 0A AC B0 38 07 03 17 FA 81 69 03 AC 88
+             18 0A AC B0 38 07 03 17 FA 81 69 03 83 01 AD 8D 9F 59 16 02 AD 72
+             62 E0 90 01 31 4B AD 6F 1A 6F 15 2F 1B 19 03)
+       (|COMMON-LISP-USER|::|GAME| 0. |COMMON-LISP-USER|::|AI-MOVE-EASY|
+        |COMMON-LISP-USER|::|SET-MOVE-POSITIONS|
+        |COMMON-LISP-USER|::|MOVE-POSITIONS| 2. 1. 3. 4. 5. 6. 7. 14. 20. 21.
+        8. 16. 17. 24. 12. 18. |COMMON-LISP-USER|::|CONVERT-NUM-TO-MOVE|
+        |COMMON-LISP-USER|::|AVAILABLE-MOVE| #.#'|COMMON-LISP|::|EQUAL|
+        |COMMON-LISP-USER|::|CHECK-BELOW| |COMMON-LISP-USER|::|AI-MOVE-INTM|
+        |COMMON-LISP-USER|::|PICK-RANDOM-FROM-LIST|
+        |COMMON-LISP-USER|::|ADD-TO-MOVES-LIST|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "Function that determines an 'easy' AI move.\n\n
+  Selects a legal move at using algorithm and adds a move to the global variable 'game',\n
+  attempts to get 4 in a row as qucikly as possible,\n
+  and attempts to block potential user winds."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|306 314 (DEFUN AI-MOVE-INSANE NIL ...)-8|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|AI-MOVE-INSANE| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|AI-MOVE-INSANE|
+       #14Y(00 00 00 00 00 00 00 00 26 01 2E 00 19 01)
+       (|COMMON-LISP-USER|::|AI-MOVE-INTM|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "You just can't win :)" 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|319 331 (DEFUN PRE-POPULATE NIL ...)-9|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|PRE-POPULATE| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|PRE-POPULATE|
+       #55Y(00 00 00 00 00 00 00 00 26 01 00 0F 00 0F 01 DC 1B 0A DE 6B 01 33
+            02 23 0F 01 85 00 AC DD 91 01 32 70 16 01 DF 1B 04 2E 07 85 00 AC
+            E0 91 01 32 76 16 01 2E 08 19 01)
+       (|COMMON-LISP-USER|::|GAME| |COMMON-LISP-USER|::|MOVE-POSITIONS| 0. 41.
+        (-1.) 1. 35. |COMMON-LISP-USER|::|AI| |COMMON-LISP-USER|::|DISPLAY|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "A function that pre-populates the game list for debugging only!" 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|332 340 (DEFUN AI-RESET NIL ...)-10|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|AI-RESET| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|AI-RESET|
+       #37Y(00 00 00 00 00 00 00 00 26 01 00 0F 00 0F 01 DC 1B 0A DE 6B 01 33
+            02 23 0F 01 85 00 AC DD 91 01 32 70 00 19 02)
+       (|COMMON-LISP-USER|::|GAME| |COMMON-LISP-USER|::|MOVE-POSITIONS| 0. 41.
+        (-1.))
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "AI Helper function to reset vars." 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|341 347 (DEFUN SET-MOVE-POSITIONS NIL ...)-11|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|SET-MOVE-POSITIONS| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|SET-MOVE-POSITIONS|
+       #67Y(00 00 00 00 00 00 00 00 26 01 DA 6B 01 72 62 72 B2 1B 27 DC AE 6B
+            01 31 A1 5C 78 72 B2 73 02 39 AE 6B 01 31 A1 78 72 B2 73 02 37 6B
+            03 AF 6B 01 31 A1 5C 5C 78 2D 03 04 85 01 AD AD 91 01 32 53 00 19
+            03)
+       (0. |COMMON-LISP-USER|::|GAME| 7. |COMMON-LISP-USER|::|MOVE-POSITIONS|
+        |SYSTEM|::|%SETNTH|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "Iterates through the game global and re-maps the move-position list."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|348 353 (DEFUN PRINT-MOVE-POS NIL ...)-12|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|PRINT-MOVE-POS| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|PRINT-MOVE-POS|
+       #32Y(00 00 00 00 00 00 00 00 26 01 6B 00 63 1B 0A 87 01 00 14 38 01 31
+            8E 83 01 AD 8D 9F 72 00 19 03)
+       (|COMMON-LISP-USER|::|MOVE-POSITIONS|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "Prints the move-position list." 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|354 362 (DEFUN CONVERT-NUM-TO-MOVE (MOVE-NUM) ...)-13|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|CONVERT-NUM-TO-MOVE|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|CONVERT-NUM-TO-MOVE|
+       #38Y(00 00 00 00 01 00 00 00 26 02 DA DA DB B0 73 02 39 38 01 72 CE 81
+            B1 00 AF DC 72 D2 81 B1 01 14 AD DA 61 03 19 04)
+       (0. #10r1/7 7.)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|NIL| |COMMON-LISP|::|NIL|)
+       (|COMMON-LISP-USER|::|MOVE-NUM|)
+       "Converts a *move-position* move to its respective (col, row, player) move for\n
+   insertion into the game global."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|363 368 (DEFUN CONVERT-MOVE-TO-NUM (MOVE) ...)-14|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|CONVERT-MOVE-TO-NUM|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|CONVERT-MOVE-TO-NUM|
+       #28Y(00 00 00 00 01 00 00 00 26 02 94 01 72 B2 DA A0 5C 78 72 B2 73 02
+            39 33 02 37 19 02)
+       (7.) (|COMMON-LISP|::|T| |COMMON-LISP|::|NIL| |COMMON-LISP|::|NIL|)
+       (|COMMON-LISP-USER|::|MOVE|)
+       "Converts a (col, row, player) move to a *move-position* move for\n
+   insertion into the move-position global."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|370 377 (DEFUN CHECK-BELOW (NUM) ...)-15|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|CHECK-BELOW| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|CHECK-BELOW|
+       #34Y(00 00 00 00 01 00 00 00 26 02 AD DA 91 01 32 0C DB AE 73 02 37 6B
+            02 71 A1 24 03 03 02 19 02 00 19 02)
+       (6. -7. |COMMON-LISP-USER|::|MOVE-POSITIONS| -1.)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|NIL| |COMMON-LISP|::|NIL|)
+       (|COMMON-LISP-USER|::|NUM|)
+       "Checks the row below the num-th move-position to see if there's a piece below it.\n
+   @param num - A *move-position* representation of a move."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|378 387 (DEFUN PICK-CLOSEST-TO-LAST (CONCURRENT-MOVES) ...)-16|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|PICK-CLOSEST-TO-LAST|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|PICK-CLOSEST-TO-LAST|
+       #68Y(00 00 00 00 01 00 00 00 26 02 DA DB DB B0 72 62 72 B2 1B 25 AD B2
+            71 A1 6B 02 73 01 38 72 B9 B0 91 01 33 13 AD B2 71 A1 6B 02 73 01
+            38 81 B9 03 1D 05 AD B2 80 A1 02 85 01 AD AD 91 01 32 55 16 02 15
+            19 03)
+       (41. 0. |COMMON-LISP-USER|::|AI-LAST-MOVE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP-USER|::|CONCURRENT-MOVES|)
+       "Picks the move closest to the last move." 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))

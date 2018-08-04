@@ -1,0 +1,59 @@
+(|SYSTEM|::|VERSION| '(20080430.))
+#0Y_ #0Y |CHARSET|::|UTF-8|
+#Y(#:|1 64 (DEFUN DISPLAY NIL ...)-1|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|DISPLAY| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|DISPLAY|
+       #106Y(00 00 00 00 00 00 00 00 26 01 01 02 DA 1B 31 7D 02 6B 02 63 1B 1A
+             87 01 00 5C 78 96 03 91 01 2F 0D B0 94 01 9F 5C 5C 7A 7B 01 82 02
+             23 04 83 01 AD 8D 9F 62 16 02 AD AF 7B 01 82 02 23 01 85 00 AC DB
+             91 01 34 49 16 01 AC 72 63 63 1B 0E 87 01 00 DD 6B 04 AE 6F 05 33
+             02 15 83 01 AD 8D 9F 6E 16 02 E0 6B 04 33 01 15 19 03)
+       (0. 6. |COMMON-LISP-USER|::|GAME|
+        #Y(|COMMON-LISP-USER|::|DISPLAY-1|
+           #20Y(00 00 00 00 02 00 00 00 21 18 AF 31 97 AE B0 31 90 9E 19 04) ()
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        |COMMON-LISP|::|*STANDARD-OUTPUT*| |COMMON-LISP-USER|::|MAKEROW|
+        #Y(|COMMON-LISP-USER|::|DISPLAY-2|
+           #19Y(00 00 00 00 01 00 00 00 21 17 DA AF 38 02 31 95 9E 19 03)
+           ("\n
+ 1 2 3 4 5 6 7")
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)))
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
+       "This function will print a representation of the global 'game' variable as pieces on a board."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|66 82 (DEFUN MAKECELL (&OPTIONAL PLAYER) ...)-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|MAKECELL| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|MAKECELL|
+       #41Y(00 00 00 00 00 00 01 00 26 07 3D 01 AD 8E 1A 0C C8 14 31 51 19 02
+            C5 1B 78 C7 1B 75 AD 8E AC 76 AD DB 90 01 2F 73 00 19 02)
+       ("o|" 1. "x|" "_|")
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|NIL| |COMMON-LISP|::|NIL|)
+       (|COMMON-LISP|::|&OPTIONAL| |COMMON-LISP-USER|::|PLAYER|)
+       "Returns a single cell, like 'x|' or '_|' or 'o|'.\n
+	Optional argument is the player whose piece should fill the cell (AI = 0, user = 1).\n
+	If 'player' evaluates to anything else (or doesn't exist), the cell will be drawn with an underscore (empty).\n
+	'x' will represent the user, and 'o' will represent the AI."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|84 115 (DEFUN MAKEROW (INPUT) ...)-3|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|COMMON-LISP-USER|::|MAKEROW| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|COMMON-LISP-USER|::|MAKEROW|
+       #97Y(00 00 00 00 01 00 00 00 26 02 9E 10 00 63 DB 71 51 63 6B 00 DC DD
+            38 02 81 82 02 DE 1B 33 7D 01 AF 63 1B 02 83 01 AD 8C 9F 17 87 01
+            00 78 96 03 91 01 2F 70 E0 B1 9F 5C 78 6F 07 82 02 26 04 7E 03 16
+            02 92 01 09 E0 AF 2E 07 14 82 02 26 02 85 00 AC DF 91 01 34 47 16
+            01 AD 31 51 16 03 11 19 02)
+       (|COMMON-LISP-USER|::|INPUT| "|" #.#'|COMMON-LISP|::|<|
+        #.#'|COMMON-LISP|::|CAR| 0. 7. |COMMON-LISP|::|STRING|
+        |COMMON-LISP-USER|::|MAKECELL|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP-USER|::|INPUT|)
+       "Returns a string of cells representing a row, like: |x|_|o|o|o|x|_|\n
+	Argument is the list of 7 or fewer entries (columns) to populate.\n
+	Argument should take the form ((col player) (col player) ...)"
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
