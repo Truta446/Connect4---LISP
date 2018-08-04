@@ -3,7 +3,7 @@
 ;;; A verison of the popular board game which involves an AI player
 ;;; vs. one human player.
 ;;;
-;;; @author Jason Pollman, Cullin Moran, Walter Alfaro, Robert Iannucci, Ricky Sanders
+;;; @author Jason Pollman, Cullin Moran, Walter Alfaro, Robert Iannucci, Ricky Sanders and Juan Versolato
 ;;; 11/12/13
 ;;; ITCS-3152-091
 
