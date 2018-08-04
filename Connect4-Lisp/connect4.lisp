@@ -4,7 +4,7 @@
 ;;; vs. one human player.
 ;;;
 ;;; @author Jason Pollman, Cullin Moran, Walter Alfaro, Robert Iannucci, Ricky Sanders and Juan Versolato
-;;; 11/12/13
+;;; 11/12/13 - 04/08/18
 ;;; ITCS-3152-091
 
 
@@ -30,6 +30,7 @@
   (setf gameover nil)
 )
 
+;; Defining global variables
 (defvar move-positions)
 (defvar difficulty)
 (defvar first '())

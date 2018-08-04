@@ -144,7 +144,7 @@
    (cond ((equal *win* 3) t)
          ((null list) nil)
          (t (and (setf prevA newA)
-                 (setf prevB newB)  
+                 (setf prevB newB)
                  (winVertical prevA prevB (rest list))))))
 
 (defun printWinner() 

@@ -4,8 +4,8 @@
 ;;;
 ;;; Part of connect4.lisp
 ;;;
-;;; @author Jason Pollman, Cullin Moran, Walter Alfaro, Robert Iannucci, Ricky Sanders
-;;; 11/12/13
+;;; @author Jason Pollman, Cullin Moran, Walter Alfaro, Robert Iannucci, Ricky Sanders and Juan Versolato
+;;; 11/12/13 - 04/08/18
 ;;; ITCS-3152-091
 
 
@@ -32,7 +32,7 @@ o888     88   ooooooo   oo oooooo   oo oooooo    ooooooooo8   ooooooo   o888oo  
   ; If the user decides to play then ask for difficulty level.
   (cond                                                                                                                                    
     ((eq 1 play) (format t "~%What difficulty would you like to play on?~%0. Beginner~%1. Intermediate~%2. Hard~%3. Impossible~%> ") (setf difficulty (read)))
-    ((eq 2 play) (return-from main (format t "~%Thank you for playing!"))))
+    ((eq 2 play) (format t "~%Thank you for playing!") (sleep 3)  (return-from main)))
 
   ; Set the first player randomly (0 to 1 [Inclusive])
   (setf first (random 2))
