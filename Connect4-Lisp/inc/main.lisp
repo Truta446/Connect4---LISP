@@ -19,10 +19,10 @@
   ; Print headers to the screen.
   (format t "~%~%WELCOME TO...~%~%")
   (format t "  oooooooo8                                                               o8              o88   
-o888     88   ooooooo   oo oooooo   oo oooooo    ooooooooo8   ooooooo   o888oo          o8888   
-888         888     888  888   888   888   888  888oooooo8  888     888  888          o88 888   
-888o     oo 888     888  888   888   888   888  888         888          888        o888oo888oo 
- 888oooo88    88ooo88   o888o o888o o888o o888o   88oooo888   88ooo888    888o           o888o  ~%~%")
+              o888     88   ooooooo   oo oooooo   oo oooooo    ooooooooo8   ooooooo   o888oo          o8888   
+              888         888     888  888   888   888   888  888oooooo8  888     888  888          o88 888   
+              888o     oo 888     888  888   888   888   888  888         888          888        o888oo888oo 
+               888oooo88    88ooo88   o888o o888o o888o o888o   88oooo888   88ooo888    888o           o888o  ~%~%")
   (format t "~%6 |_|_|_|_|_|_|_|~%5 |_|_|_|_|_|_|_|~%4 |_|_|_|_|_|_|_|~%3 |_|_|_|_|_|o|_|~%2 |_|o|x|_|x|x|_|~%1 |o|x|o|o|o|x|_|~%   1 2 3 4 5 6 7")  
   
   ; Ask the user if they want to play.
@@ -35,6 +35,7 @@ o888     88   ooooooo   oo oooooo   oo oooooo    ooooooooo8   ooooooo   o888oo  
     ((eq 2 play) (format t "~%Thank you for playing!") (sleep 3)  (return-from main)))
 
   ; Set the first player randomly (0 to 1 [Inclusive])
+  ;kkkkkk
   (setf first (random 2))
 
   ; Call functions depending on who's playing first.
@@ -44,7 +45,7 @@ o888     88   ooooooo   oo oooooo   oo oooooo    ooooooooo8   ooooooo   o888oo  
 
   (main) ; Call main recursively to play again.
 
-  ) ; End of main function.
+) ; End of main function.
 
 
 (defun addPlayerList(input)
