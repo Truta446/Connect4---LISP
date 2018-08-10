@@ -21,10 +21,10 @@ WELCOME TO...\n\n")
         #Y(|COMMON-LISP-USER|::|MAIN-2|
            #19Y(00 00 00 00 01 00 00 00 21 17 DA AF 38 02 31 95 9E 19 03)
            ("  oooooooo8                                                               o8              o88   \n
-o888     88   ooooooo   oo oooooo   oo oooooo    ooooooooo8   ooooooo   o888oo          o8888   \n
-888         888     888  888   888   888   888  888oooooo8  888     888  888          o88 888   \n
-888o     oo 888     888  888   888   888   888  888         888          888        o888oo888oo \n
- 888oooo88    88ooo88   o888o o888o o888o o888o   88oooo888   88ooo888    888o           o888o  \n\n")
+              o888     88   ooooooo   oo oooooo   oo oooooo    ooooooooo8   ooooooo   o888oo          o8888   \n
+              888         888     888  888   888   888   888  888oooooo8  888     888  888          o88 888   \n
+              888o     oo 888     888  888   888   888   888  888         888          888        o888oo888oo \n
+               888oooo88    88ooo88   o888o o888o o888o o888o   88oooo888   88ooo888    888o           o888o  \n\n")
            (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
         #Y(|COMMON-LISP-USER|::|MAIN-3|
            #19Y(00 00 00 00 01 00 00 00 21 17 DA AF 38 02 31 95 9E 19 03)
@@ -65,7 +65,7 @@ Thank you for playing!")
         #Y(|COMMON-LISP-USER|::|MAIN-7|
            #19Y(00 00 00 00 01 00 00 00 21 17 DA AF 38 02 31 95 9E 19 03)
            ("\n
-Good choice!")
+Good choice!\n")
            (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
         #Y(|COMMON-LISP-USER|::|MAIN-8|
            #19Y(00 00 00 00 01 00 00 00 21 17 DA AF 38 02 31 95 9E 19 03)
@@ -100,16 +100,17 @@ You have been randomly chosen to go first.\n")
        (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
        (|COMMON-LISP-USER|::|INPUT|) |COMMON-LISP|::|NIL| 1))
    (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
-#Y(#:|65 102 (DEFUN GAMEPLAY NIL ...)-3|
+#Y(#:|65 107 (DEFUN GAMEPLAY NIL ...)-3|
    #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
    (|COMMON-LISP-USER|::|GAMEPLAY| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
     #Y(|COMMON-LISP-USER|::|GAMEPLAY|
-       #122Y(00 00 00 00 00 00 00 00 26 01 6B 00 72 62 8F AD 08 6B 00 6F 01 02
-             22 80 46 6B 06 25 07 02 2E 08 2E 04 6B 00 6F 01 02 22 80 40 E5 6B
-             03 33 01 15 38 04 31 7F 0F 0C 14 2F 0D 6B 06 25 0E 02 2E 08 6B 00
-             72 62 8F AD 2E 6B 00 6F 01 02 23 27 E9 6B 03 33 01 15 2E 04 D5 14
-             6B 03 33 01 15 19 01 DC 6B 03 33 01 15 2E 04 CA 1B 6D E3 6B 03 33
-             01 15 2E 04 CF 1B 62 29 00 01 FF 90)
+       #133Y(00 00 00 00 00 00 00 00 26 01 6B 00 72 62 8F AD 07 6B 00 6F 01 02
+             22 13 6B 06 25 07 02 2E 08 2E 04 6B 00 6F 01 02 22 0F D0 1B 18 DC
+             6B 03 33 01 15 2E 04 CA 1B 80 41 E3 6B 03 33 01 15 2E 04 CF 1B 36
+             D3 14 6B 03 33 01 15 38 04 31 7F 0F 0C 6B 0C E7 90 01 32 6C 6B 0C
+             2F 0F 6B 06 25 10 02 2E 08 6B 00 72 62 8F AD 18 6B 00 6F 01 02 23
+             11 EB 6B 03 33 01 15 2E 04 D7 14 6B 03 33 01 15 19 01 29 00 01 FF
+             85)
        (|COMMON-LISP-USER|::|GAME| |COMMON-LISP-USER|::|WINCHECK|
         #Y(|COMMON-LISP-USER|::|GAMEPLAY-1|
            #19Y(00 00 00 00 01 00 00 00 21 17 DA AF 38 02 31 95 9E 19 03)
@@ -139,13 +140,20 @@ Thank you for playing!\n\n\n")
 Choose a column to make your move (1-7): \n
 > ")
            (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
-        |COMMON-LISP-USER|::|INPUT| |COMMON-LISP-USER|::|ADDPLAYERLIST| 1.
+        |COMMON-LISP-USER|::|INPUT| 7.
         #Y(|COMMON-LISP-USER|::|GAMEPLAY-6|
+           #19Y(00 00 00 00 01 00 00 00 21 17 DA AF 38 02 31 95 9E 19 03)
+           ("\n\n
+Choose another column to make your move (1-7): \n
+> ")
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        |COMMON-LISP-USER|::|ADDPLAYERLIST| 1.
+        #Y(|COMMON-LISP-USER|::|GAMEPLAY-7|
            #19Y(00 00 00 00 01 00 00 00 21 17 DA AF 38 02 31 95 9E 19 03)
            ("\n
 GAME RESULTS:\n")
            (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
-        #Y(|COMMON-LISP-USER|::|GAMEPLAY-7|
+        #Y(|COMMON-LISP-USER|::|GAMEPLAY-8|
            #19Y(00 00 00 00 01 00 00 00 21 17 DA AF 38 02 31 95 9E 19 03)
            ("\n\n
 Thank you for playing!\n\n\n")
@@ -153,6 +161,6 @@ Thank you for playing!\n\n\n")
        (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|) ()
        |COMMON-LISP|::|NIL| 1))
    (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
-#Y(#:|103 107 (MAIN)-4| #14Y(00 00 00 00 00 00 00 00 20 01 2E 00 19 01)
+#Y(#:|108 112 (MAIN)-4| #14Y(00 00 00 00 00 00 00 00 20 01 2E 00 19 01)
    (|COMMON-LISP-USER|::|MAIN|)
    (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
