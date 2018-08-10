@@ -31,8 +31,13 @@ o888     88   ooooooo   oo oooooo   oo oooooo    ooooooooo8   ooooooo   o888oo  
 
   ; If the user decides to play then ask for difficulty level.
   (cond                                                                                                                                    
-    ((eq 1 play) (format t "~%What difficulty would you like to play on?~%0. Beginner~%1. Intermediate~%2. Hard~%3. Impossible~%> ") (setf difficulty (read)))
-    ((eq 2 play) (format t "~%Thank you for playing!") (sleep 3)  (return-from main)))
+    ((eq 1 play) (format t "~%What difficulty would you like to play on?~%0. Beginner~%1. Intermediate~%2. Hard~%3. Impossible~%> ") (setq difficulty (read)))
+    ((> play 1) (format t "~%Thank you for playing!") (sleep 3)  (return-from main)))
+
+  ;If the player put a number greater than 3, it'll close the game.
+  (cond 
+    ((< difficulty 4) (format t "~%Good choice!") (sleep 3))
+    ((> difficulty 3) (format t "~%Thank you for playing!") (sleep 3) (return-from main)))
 
   ; Set the first player randomly (0 to 1 [Inclusive])
   (setf first (random 2))
